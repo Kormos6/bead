@@ -1,0 +1,75 @@
+/* Általános formázás */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, section {
+    margin: 20px;
+}
+
+/* Videó stílusok */
+#video iframe {
+    width: 100%;
+    height: 400px;
+}
+
+/* Órarend stílusok (CSS Grid) */
+#schedule {
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: auto; /* Elrendezési táblázat átlépése esetén legyen görgethető */
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 1px;
+    max-height: 400px; /* Maximális magasság beállítása */
+}
+
+.header-cell,
+.schedule-cell {
+    border: 1px solid #ccc;
+    padding: 8px; /* Kisebb padding */
+    text-align: center;
+    overflow: hidden; /* Túlcsorduló tartalom esetén legyen elrejtve */
+}
+
+.header-cell {
+    background-color: #add8e6; /* Világos kék */
+    font-weight: bold;
+}
+
+.schedule-cell:nth-child(odd) {
+    background-color: #ffffcc; /* Világos sárga */
+}
+
+.schedule-cell:nth-child(even) {
+    background-color: #98fb98; /* Világos zöld */
+}
+
+
+
+
+/* Galéria stílusok */
+.gallery-category {
+    margin-bottom: 30px;
+}
+
+.gallery-category img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Regisztráció stílusok */
+#registration {
+    max-width: 400px;
+    margin: 0 auto;
+}
