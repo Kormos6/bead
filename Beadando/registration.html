@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <script src="registration.js"></script>
+    <title>Regisztráció</title>
+</head>
+<body>
+    <form action="">
+        <div class="container">
+          <h1>Regisztráció</h1>
+          <hr>
+
+          <label for="felhasznalonev"><b>Felhasználónév</b></label>
+          <input type="text" placeholder="Add meg a felhasználóneved" name="felhasznalonev" id="felhasznalonev" required>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Add meg az e-mail címed" name="email" id="email" required>
+      
+          <label for="psw"><b>Jelszó</b></label>
+          <input type="password" placeholder="Add meg a jelszavad" name="psw" id="psw" onchange='check_pass()' required>
+      
+          <label for="psw-repeat"><b>Jelszó mégegyszer</b></label>
+          <input type="password" placeholder="Add meg a jelszavad mégegyszer" name="psw-repeat" id="psw-repeat" onchange='check_pass()' required>
+
+          <label for="szuldat"><b>Születési dátum</b></label>
+          <input type="text" placeholder="Add meg a születési dátumod" name="szuldat" id="szuldat" required>
+          <hr>
+      
+          <button type="submit" onclick="registration()" class="registerbtn" id="register">Regisztráció</button>
+        </div>
+      
+        <div class="container signin">
+          <p>Van már felhasználód? <a href="#">Jelentkezz be</a>.</p>
+        </div>
+      </form>
+
+
+      <p id='visszajelzes'></p> 
+</body>
+</html>
